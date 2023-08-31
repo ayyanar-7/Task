@@ -2,7 +2,7 @@ a = [{'name' : "ayyanar"},
 {'name' : "vikram"},
 {'name' : "guna"},
 {'name' : "logesh"},
-{'name' : "kala"}];
+{'name' : "nandhini"}];
 
 var b = a.map(e => {
     v={}
