@@ -2,10 +2,10 @@ var s = "hiiamAyyanar";
 var temp = "";
 for(let i = 0;i < s.length;i++){
     if(i % 2 == 1)
-        temp[i] = 'Z';
+        temp += 'Z';
     else
-        temp[i] = s[i];
+        temp += s[i];
 }
-s = temp
+s = temp;
 
 console.log(temp);

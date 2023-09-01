@@ -1,4 +1,1 @@
-var s = "ayyanar";
-
-s[0] = "A";
-console.log(s);
+console.log(6 / 2);

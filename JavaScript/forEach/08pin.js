@@ -16,7 +16,7 @@ while(count <= 3){
         break;
     }
     else{
-        console.log("Sorry that was wrong.")
+        console.log("Sorry that was wrong.");
     }
     count++;
 }
