@@ -5,15 +5,15 @@ var a = [
     },
     {
       "name": "Bob",
-      "grades": ["B", "C", "D", "E", "A"]
+      "grades": ["B", "C", "D", "E", "E"]
     },
     {
       "name": "Charlie",
-      "grades": ["C", "D", "E", "A", "B"]
+      "grades": ["C", "D", "E", "E", "B"]
     },
     {
       "name": "David",
-      "grades": ["D", "E", "A", "B", "C"]
+      "grades": ["D", "E", "E", "E", "C"]
     },
     {
       "name": "Eva",
@@ -25,11 +25,11 @@ var a = [
     },
     {
       "name": "Grace",
-      "grades": ["B", "C", "D", "E", "A"]
+      "grades": ["B", "C", "A", "E", "A"]
     },
     {
       "name": "Hannah",
-      "grades": ["C", "D", "E", "A", "B"]
+      "grades": ["C", "A", "A", "A", "B"]
     },
     {
       "name": "Ivy",
@@ -41,22 +41,52 @@ var a = [
     }
 ];
 
-function avg(arr){
-    var sum = 0;
-    arr.forEach(e => {
-        switch(e){
-            case 'A':
-                sum += 100;
-                break;
-            case 'B':
-                sum += 90;
-                break;
-            case 'C':
-                sum += 80;
-                break;
-            case 'D':
-                sum += 70
-                break;
-        }
-    });
+function avgMark(arr){
+    var sum = totalMark(arr);
+    
+    avg = sum / 5;
+
+    return avg;
+
 }
+
+
+function totalMark(arr){
+  var sum = 0;
+  arr.forEach(e => {
+    sum += gradeToMark(e);
+  });
+
+  return sum;
+
+}
+
+function gradeToMark(e){
+  switch(e){
+    case 'A':
+        return 100
+    case 'B':
+        return 90;
+    case 'C':
+        return 80;
+    case 'D':
+        return 70;
+    case 'E':
+        return 60;
+  }
+}
+
+var g = 'B';
+
+var f = a.filter(e => {
+  var emp = {}; 
+  if(avgMark(e.grades) > gradeToMark(g)){
+    emp["name"] = e.name;
+    emp["grades"] = e.grades;
+
+    return emp;
+  }
+
+});
+
+console.log(f);
