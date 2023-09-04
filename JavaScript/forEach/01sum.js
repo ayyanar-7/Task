@@ -4,8 +4,9 @@ s = 0;
 a.forEach(e => {
     s = e + s;
 });
+t = 0
 a.forEach(e =>{
-    s = e + s;
+    t = e + t;
 })
 
-console.log(s);
+console.log(s + t);

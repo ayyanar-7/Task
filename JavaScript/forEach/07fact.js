@@ -5,7 +5,10 @@ function fact(n){
     }
     return fact;
 }
-
-
 var n = 5;
-console.log(fact(n));
+
+n = [n];
+
+n.forEach(e => {
+    console.log(fact(n));
+});
