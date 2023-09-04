@@ -1,4 +1,4 @@
-let a = ['apple', 'code', 'dog', 'apple', 'code', 'dog', 'apple', 'x'];
+let a = ['apple', 'code', 'dog', 'apple', 'code', 'dog', 'apple', 'x', 'code'];
 
 let c = [];
 c[0] = a[0];
