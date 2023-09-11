@@ -1,0 +1,96 @@
+.page-wrapper{
+    background-color: rgb(220, 245, 217);
+    margin: 20px;
+    outline: 2px solid;
+    padding: 20px;
+}
+.page-wrapper > div{
+    height: 100px;
+    display:flex;
+    max-width: 600px;
+    background-color: rgb(79, 224, 243);
+    border: 2px solid;
+    padding: 7px;
+    margin: 10px;
+}
+h1{
+    text-align: center;
+}
+#default{
+    height: 300px;
+    display: block;
+}
+#default div{
+    margin: 0px 0px 7px 0px;
+    height: 30%;
+    width: 30%;
+}
+.page-wrapper div div{
+    height: 90%;
+    width: 30%;
+    background-color: orange;
+    border: 1px solid;
+    margin: 5px;;
+
+}
+
+.page-wrapper div div p{
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+#direction_row{
+    flex-direction: row;
+}
+#direction_column{
+    flex-direction: column;
+    height: 300px;
+}
+#direction_column div{
+    margin: 5px;
+}
+#direction_row_reverse{
+    flex-direction: row-reverse;
+}
+#direction_column_reverse{
+    flex-direction: column-reverse;
+    height: 300px;
+}
+#direction_column_reverse div{
+    margin: 5px;
+}
+#nowrap{
+    flex-wrap: nowrap;
+}
+#wrap{
+    flex-wrap: wrap;
+    height: 50%;
+}
+#wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

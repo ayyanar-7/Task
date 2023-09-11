@@ -1,0 +1,74 @@
+html{
+    margin : 0;
+    padding : 0;
+}
+body{
+    margin :0;
+    font : 75% georgia, sans-serif;
+    line-height : 2;
+    word-spacing: 2px;
+    background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left;
+
+}
+.page-wrapper{
+    position : absolute;
+    padding: 0px 120px 0px 110px;
+    background: url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right;
+    text-align: justify;
+}
+header h1{
+    background: url(http://csszengarden.com/001/h1.gif) no-repeat top left;
+    height : 100px;
+    width : 200px;
+    margin : 10px 10px 10px 0px;
+    float : left;
+    clear : both;
+    left : 0px;
+    white-space: nowrap;
+}
+header h2{
+    background: url(http://csszengarden.com/001/h2.gif) no-repeat top right; 
+    height : 100px;
+    width : 250px;
+    float:right;
+    white-space: nowrap;
+
+}
+header{
+    margin : 10px;
+    height : 150px;
+}
+.summary{
+    clear : both;
+    float : left;
+    width : 200px;
+    margin : 10px;
+    text-align : justify;
+}
+.section{
+    clear : both;
+    margin : 10px;
+}
+.extra1{
+    background:url(http://csszengarden.com/001/cr2.gif) no-repeat top right;
+    position : absolute;
+    height : 200px;
+    width : 150px;
+    top: 30px;
+    right : 0;
+}
+.sidebar .wrapper{
+    background: url(http://csszengarden.com/001/paper-bg.jpg)repeat-y;
+    height : 600px;
+    width : 150px;
+    margin : 0;
+    position : relative;
+    top: 130px;
+    padding : 200px 0px;
+    float : right;
+}
+.sidebar{
+    height : 600px;
+    width : 150px;
+    float : right;
+}
