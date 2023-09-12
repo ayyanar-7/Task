@@ -153,7 +153,7 @@ h1{
 #row-gap{
     flex-wrap: wrap;
     row-gap: 30px;
-    height: 300px;
+    height: 350px;
 }
 #column-gap{
     column-gap: 20px;
@@ -161,8 +161,88 @@ h1{
 #row-column-gap{
     flex-wrap: wrap;
     gap: 20px 20px;
-    height: 300px;
+    height: 350px;
 }
+#order1{
+    order: 1;
+}
+#order-1{
+    order: -1;
+}
+#order0{
+    order: 0;
+}
+#grow1{
+    flex-grow: 1;
+}
+#grow0{
+    flex-grow: 0;
+}
+#grow-1{
+    flex-grow: -1;
+}
+#shrink5{
+    flex-shrink: 5;
+}
+#shrink0{
+    flex-shrink: 0;
+}
+#basis1{
+    flex-basis: auto;
+}
+#flex{
+    flex: 0 5 auto;
+}
+.self{
+    height: 200px !important;
+}
+.self div{
+    height: 80px;
+}
+#self1{
+    align-self: flex-start;
+}
+#self2{
+    align-self: flex-end;
+}
+#self3{
+    align-items: baseline;
+}
+#self4{
+    align-self: baseline;
+}
+#self5{
+    align-self: stretch;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
