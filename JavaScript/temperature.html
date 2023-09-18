@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src = "temp.js"></script>
+    <style>
+        .table{
+            border: 1px solid black;
+            width: 400px;
+            text-align: center;
+        }
+        #div{
+            text-align: center;
+        }
+        #div .cel{
+            padding-left: 30px;
+        }
+        #div .fah{
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Celsius to fahrenheit conversion</h2>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                From C:
+            </td>
+            <td>
+                <input type = text id = "from">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                To C:
+            </td>
+            <td>
+                <input type = text id = "to">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button id = "chart">Prepare chart</button>
+    <br><br>
+    <table class = "table">
+        <header>
+            <td>
+                Celsius
+            </td>
+            <td>
+                fahrenheit
+            </td>
+        </header>
+        <table id = "div" class = "table">
+
+        </table>
+    </table>
+</body>
+</html>
