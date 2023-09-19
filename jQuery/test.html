@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include any other necessary scripts or stylesheets here -->
+</head>
+<body>
+    <input type="text" id="p" placeholder="Principal">
+    <input type="text" id="n" placeholder="Number of Years">
+    <input type="text" id="r" placeholder="Rate of Interest">
+    <button id="display">Calculate Simple Interest</button>
+    <div id="result"></div>
+    <!-- Other HTML content if needed -->
+    
+    <script>
+        // Your JavaScript code goes here
+        var simple = {};
+
+simple.int = (
+    function(){
+        var p = $("#p").val();
+        var n = $("#n").val();
+        var r = $("#r").val();
+        console.log(p);
+        function calculation(){
+            var si = (p * n * r) / 100;
+
+            $("#result").html("Simple Interest = " + si);
+            console.log(si);
+        }
+        return{
+            calculation: calculation
+        }
+    }
+)();
+
+$(
+    function(){
+        $("#display").click(
+            function(){
+                simple.int.calculation();
+            }
+        );
+    }
+);
+  </script>
+</body>
+</html>

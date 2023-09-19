@@ -13,3 +13,9 @@ var r = a.reduce((acc, val) => {
 }, {});
 
 console.log(r);
+// var r = a.reduce((acc ,val) => {
+//     val = val.toLowerCase();
+//     acc[val] = 
+
+// }, {});
+

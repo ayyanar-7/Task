@@ -1,0 +1,172 @@
+
+html{
+    background: #daede2;
+}
+body{
+    background: #77c4d3;
+    margin : 40px;
+}
+.extra1{
+    background: rgba(51,55,69,0.9);
+    width: 250px;
+    position: fixed;
+    top: 0px;
+    right : 0px;
+    bottom: 0px;
+}
+.sidebar{
+    background: rgba(246,247,146,0.9);
+    width: 200px;
+    position: absolute;
+    margin-top: 100px;
+    margin-right: 70px; 
+    z-index: 2;
+    top: 0px;
+    right: 0px;
+    padding: 50px 20px;
+}
+.preamble{
+    background: rgba(255,255,255,0.9);
+    margin: -40px;
+    width: 500px;
+    line-height: 1.5em;
+    padding: 30px;
+}
+.explanation{
+    width: 250px;
+    position: relative;
+    top:100px;
+    float: left;
+    margin-left: 50px;
+}
+.participation{
+    background: rgba(234,46,73,0.9);
+    z-index: 3;
+    float: right;
+    position : relative;
+    top: 100px;
+    width: 300px;
+}
+.benefits{
+    width:200px;
+    height: 400px;
+    background: rgba(255,255,255,0.9);
+    position: relative;
+    top: 200px;
+    left:30px;
+    padding: 30px;
+    clear: both;
+}
+.requirements{
+    width:400px;
+    top: 200px;
+    position: absolute;
+    float: right;
+    right: 40px;
+    z-index: 3;
+    top: 1677px;
+    background: rgba(255,255,255,0.9);
+}
+header h1{
+    background-color: #ea2e49;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    position: relative;
+    float: right;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 21.6px;
+}
+body {
+    font-family: "tablet-gothic", verdana, arial, sans-serif;
+}
+h2{
+    font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
+    font-weight: 900px;
+    font-size: 6em;
+    color:white;
+    width: auto;
+    padding: 30px;
+}
+@media screen and (min-width: 550px){
+h2 {
+    font-size: 8em;
+}}
+@media screen and (min-width: 700px){
+    body{ font-size: 90%;
+    }
+}
+@media screen and (min-width: 800){
+    body{font-size: 120%;}
+}
+@media screen and (min-width: 900){
+    body{font-size: 150%}
+}
+@media screen and (min-width: 1000){
+    body{font-size: 200%}
+}
+footer{
+    background: rgba(246,247,146,0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

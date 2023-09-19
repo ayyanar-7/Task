@@ -162,62 +162,63 @@
 		div.benefits 				{ float:left; }
 		div.requirements 			{ float:left; }
 	}
+/* 650 and up */	
+@media screen and (min-width:650px) {
 
-	/* 650 and up */	
-	@media screen and (min-width:650px) {
+	div.benefits 				{ margin-top:12%; width:30%; }
+	div.requirements 			{ width:69%; }
 
-		div.benefits 				{ margin-top:12%; width:30%; }
-		div.requirements 			{ width:69%; }
+}
 
-	}
+/* 700 and up */	
+@media screen and (min-width:700px) {
 
-	/* 700 and up */	
-	@media screen and (min-width:700px) {
+	body 						{ font-size:90%; }
 
-		body 						{ font-size:90%; }
+}
 
-	}
+/* 800 and up */	
+@media screen and (min-width:800px) {
 
-	/* 800 and up */	
-	@media screen and (min-width:800px) {
+	body 						{ font-size:100%; }
 
-		body 						{ font-size:100%; }
+}
 
-	}
+/* 900 and up */	
+@media screen and (min-width:900px) {
 
-	/* 900 and up */	
-	@media screen and (min-width:900px) {
+	body 						{ font-size:110%; }
 
-		body 						{ font-size:110%; }
+}
 
-	}
+/* 1500 and up */	
+@media screen and (min-width:1500px) {
 
-	/* 1500 and up */	
-	@media screen and (min-width:1500px) {
+	body 						{ font-size:125%; }
 
-		body 						{ font-size:125%; }
+}
 
-	}
+/* 1800 and up */	
+@media screen and (min-width:1800px) {
 
-	/* 1800 and up */	
-	@media screen and (min-width:1800px) {
+	body 						{ font-size:150%; }
 
-		body 						{ font-size:150%; }
+}
 
-	}
+/* 2100 and up */	
+@media screen and (min-width:2100px) {
 
-	/* 2100 and up */	
-	@media screen and (min-width:2100px) {
+	body 						{ font-size:175%; }
 
-		body 						{ font-size:175%; }
-
-	}
+}
 
 
-	/* 2500 and up */	
-	@media screen and (min-width:2500px) {
+/* 2500 and up */	
+@media screen and (min-width:2500px) {
 
-		body 						{ font-size:200%; }
+	body 						{ font-size:200%; }
 
-	}
+}
+
+	
 
