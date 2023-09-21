@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include any other necessary scripts or stylesheets here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        function fun(){
+            var a = document.getElementById("input").value;
+            document.getElementById("div").innerHTML = a;
+        }
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+     <script>
+        $(
+            function(){
+                $("button").click(
+                    function(){
+                        var a = $("#input").val();
+                        $("#div").html(a);
+                    }
+
+                );
+            }
+        )
+    </script>
+
 </head>
 <body>
-    <input type="text" id="p" placeholder="Principal">
-    <input type="text" id="n" placeholder="Number of Years">
-    <input type="text" id="r" placeholder="Rate of Interest">
-    <button id="display">Calculate Simple Interest</button>
-    <div id="result"></div>
-    <!-- Other HTML content if needed -->
+    <input id = "input">
+    <button id = "button">Click me</button>
+    <div id = "div"></div>
     
-    <script>
-        // Your JavaScript code goes here
-        var simple = {};
-
-simple.int = (
-    function(){
-        var p = $("#p").val();
-        var n = $("#n").val();
-        var r = $("#r").val();
-        console.log(p);
-        function calculation(){
-            var si = (p * n * r) / 100;
-
-            $("#result").html("Simple Interest = " + si);
-            console.log(si);
-        }
-        return{
-            calculation: calculation
-        }
-    }
-)();
-
-$(
-    function(){
-        $("#display").click(
-            function(){
-                simple.int.calculation();
-            }
-        );
-    }
-);
-  </script>
 </body>
 </html>
