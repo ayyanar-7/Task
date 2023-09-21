@@ -15,7 +15,7 @@
 // let b: number = 24;
 // let c: number = 15;
 
-// console.log(((a: number, b: number, c?: number) => {
+// console.log(((a: number, b: number, c?: number): number => {
 //     if(c != undefined){
 //         return a + b + c;
 //     }
