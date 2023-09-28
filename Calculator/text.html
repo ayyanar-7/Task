@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container" ng-app="test" ng-controller="t">
+        <div>
+            <div id="box">
+                <input type="text" ng-model="result" ng-keyup="handleKeyUp($event)">
+                <div>
+                    {{display}}
+                </div>
+            </div>
+            <div id="box2">
+                <div>
+                    <button ng-click="clear()">AC</button>
+                    <button ng-click="backspace()"><box-icon name='arrow-back'></box-icon></button>
+                    <button ng-click="append('/')">/</button>
+                    <button ng-click="delete()">DEL</button>
+                </div>
+                <div>
+                    <button ng-click="append('7')">7</button>
+                    <button ng-click="append('8')">8</button>
+                    <button ng-click="append('9')">9</button>
+                    <button ng-click="append('*')">*</button>
+                </div>
+                <div>
+                    <button ng-click="append('4')">4</button>
+                    <button ng-click="append('5')">5</button>
+                    <button ng-click="append('6')">6</button>
+                    <button ng-click="append('-')">-</button>
+                </div>
+                <div>
+                    <button ng-click="append('1')">1</button>
+                    <button ng-click="append('2')">2</button>
+                    <button ng-click="append('3')">3</button>
+                    <button ng-click="append('+')">+</button>
+                </div>
+                <div>
+                    <button ng-click="append('%')">%</button>
+                    <button ng-click="append('0')">0</button>
+                    <button ng-click="append('.')">.</button>
+                    <button ng-click="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var app = angular.module("test", []);
+        app.controller("t", function ($scope) {
+            $scope.result = "";
+            $scope.display = 0;
+
+            // Function to handle key presses
+            $scope.handleKeyUp = function (event) {
+                const key = event.key;
+                // Handle specific key presses
+                if (key === 'Enter') {
+                    $scope.calculate(); // Example: Calculate result on Enter key
+                } else {
+                    $scope.result += key; // Append other key presses
+                }
+            };
+
+            // Function to clear the input
+            $scope.clear = function () {
+                $scope.result = "";
+            };
+
+            // Function to remove the last character from the input
+            $scope.backspace = function () {
+                $scope.result = $scope.result.slice(0, -1);
+            };
+
+            // Function to append a value to the input
+            $scope.append = function (value) {
+                $scope.result += value;
+            };
+
+            // Function to delete the last character or operator
+            $scope.delete = function () {
+                // Implement delete logic as needed
+            };
+
+            // Function to perform calculations
+            $scope.calculate = function () {
+                // Your calculation logic here
+                if ($scope.result) {
+                    var numbers = $scope.result.split(/[+\-\*\/]/).map(parseFloat);
+                    var symbols = $scope.result.split(/\d+/).filter(e => {
+                        if (e !== "") {
+                            return e;
+                        }
+                    });
+
+                    var summation = bodmas(numbers, symbols);
+
+                    console.log("sum: " + summation);
+
+                    $scope.display = summation;
+                }
+            };
+
+            // Placeholder for your calculation logic (BODMAS/BIDMAS)
+            function bodmas(num, sym) {
+                // Your "bodmas" function logic here
+                // For simplicity, you can use your existing "bodmas" function
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -12,25 +12,37 @@
         <h1>Simple Interest</h1>
         <p>This program calculate simple interest amount</p>
     </div>
-    <div ng-app = "test" controller = "t">
+    <div ng-app = "test" ng-controller = "t">
         <div class = "container">
             <label>Principle Amount:</label>
-            <input class = "form-control">
+            <input class = "form-control" ng-model = "prin" ng-change = "cal()" type = "text">
             <label>Rate of Interest:</label>
-            <input class = "form-control">
+            <input class = "form-control" ng-model = "rate" ng-change = "cal()" type = "text">
             <label>No of Years:</label>
-            <input class = "form-control">
+            <input class = "form-control" ng-model = "year" ng-change = "cal()" type = "text">
             <br>
-            <p>Simple Interest  = <span class = "text-success" ng-bind = ""></span></p>
+            <p>Simple Interest  = <span class = "text-success" ng-bind = "result"></span></p>
+            
         </div>
     </div>
     <script>
         var app = angular.module("test", []);
         app.controller("t", function($scope){
             $scope.cal = function(){
-                
+                var p = parseFloat($scope.prin);
+                var r = parseFloat($scope.rate);
+                var n = parseFloat($scope.year);
+
+                if(p && n && r){
+                    $scope.result = ( p * n * r ) / 100;
+                }
+                else{
+                    $scope.result = 0;
+                }
             }
-        })
+            $scope.cal();
+        });
+        
     </script>
 </body>
 </html>
