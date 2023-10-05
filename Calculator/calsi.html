@@ -17,7 +17,7 @@
     <div class = "container" ng-app = "test" ng-controller = "t">
         <div>
             <div id = "box">
-                <input type = "text" ng-model = "result" ng-keyup = "keyup($event)" ng-keydown = "keydown($event)"></input>
+                <input type = "text" ng-model = "result" ng-keydown = "keyup($event)" ng-keydown = "keydown($event)"></input>
                 <div>
                     {{display}}
                 </div>
@@ -26,8 +26,8 @@
                 <div>
                     <button ng-click="clear()">AC</button>
                     <button ng-click="backspace()"><box-icon name='arrow-back'></box-icon></button>
+                    <button ng-click="">+/-</button>
                     <button ng-click="append('/')">/</button>
-                    <button ng-click="delete()">DEL</button>
                 </div>
                 <div>
                     <button ng-click="append('7')">7</button>
@@ -51,7 +51,7 @@
                     <button ng-click="append('%')">%</button>
                     <button ng-click="append('0')">0</button>
                     <button ng-click="append('.')">.</button>
-                    <button ng-click="calculate()">=</button>
+                    <button ng-click="answer(2+7)">=</button>
                 </div>
             </div>          
         </div>

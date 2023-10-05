@@ -1,27 +1,6 @@
 var app = angular.module("test", []);
 app.controller("t", function($scope){
     $scope.result = "";
-    $scope.display = 0;
-
-    $scope.keyup = function (event) {
-        const key = event.key;
-        if(key.length === 1){
-            $scope.result += key;
-        }
-  
-    };
-    // $scope.keydown = function(event) {
-    //     var key = event.key;
-    //     if (key === 'Backspace') {
-    //         event.preventDefault();
-    //         if ($scope.result.length > 0) {
-    //             $scope.result = $scope.result.slice(0, -1);
-    //         }
-    //     } else if (key.length === 1 && key >= '0' && key <= '9') {
-    //         $scope.result += key;
-    //     }
-    // };
-    
 
     $scope.clear = function () {
         $scope.result = "";
@@ -38,16 +17,17 @@ app.controller("t", function($scope){
     $scope.delete = function () {
         $scope.display = 0;
     };
+    var symbols = [];
     $scope.$watch("result", function(newValue){
        
+        $scope.display = 0;
 
         if(newValue){
-            var numbers = newValue.split(/[+\-\*\/]/).map(parseFloat);
-            var symbols = newValue.split(/\d+/).filter(e => {
-                if(e != ""){
-                    return e;
-                }
+            var numbers = newValue.split(/[+\-\*\/\%]/).filter(e => e != isNaN(e)).map(parseFloat);
+            var symbols = newValue.split(/[0-9.]+/).filter(function(e){
+                return e != "";
             });
+
        
             var summation = bodmas(numbers, symbols);
         
@@ -63,6 +43,7 @@ app.controller("t", function($scope){
     }
 
     function bodmas(num, sym){
+        
         for(let i = 0;i < sym.length;i++){
          
             if(sym[i] == '*'){
@@ -77,6 +58,15 @@ app.controller("t", function($scope){
                 num.splice(i + 1, 1);
                 i--;
             }
+            else if(sym[i] == '%'){
+                num[i] = num[i] / 100;
+                symbols.splice(i, 2);
+                sym.splice(i, 1);
+            }
+            console.log("i"+ i);
+            console.log("num "+num);
+            console.log('Symbols'+symbols);
+            console.log("Sym "+sym);
         }
         let sum = num[0];
         for(let i = 0;i < sym.length;i++){

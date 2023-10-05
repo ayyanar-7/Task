@@ -15,7 +15,7 @@
     flex-direction: column;
     height: 83vh;
     width: 400px;
-    background-color: #5ba8ef;
+    background-color: #333;
     border: 2px solid #333;
     padding: 20px;
 }
@@ -51,4 +51,5 @@ input[type = "text"]{
 }
 button{
     font-size: 30px !important;
+    color:white !important;
 }
