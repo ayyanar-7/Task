@@ -1,28 +1,140 @@
 var calsi = {};
 var buttons = {};
 
+calsi.main = (
+    function(){
+        function calculator(){
+            var display = document.getElementById("display");
+            var input = document.getElementById("input").value;
+            
+            var ans = formulate(input);
+            if(!isNaN(ans)){
+                display.innerHTML = ans;
+            }else{
+                display.innerHTML = "Invalid Input";
+            }   
+        }
+
+
+        function formulate(input){
+            let ans;
+            let i = 0;
+            input = calsi.functions.order(input);
+            input = input.match(/\d+(\.\d+)?|(\d+)?\.\d+|[\+\-\*\/\(\)]/g);
+            while(input[i]){
+                if(input[i] == '('){
+                    input = calsi.functions.bracket(input);
+                }
+                i++;
+            }
+            ans = calculate(input);
+
+            return ans;
+        }
+
+
+        function calculate(input){
+            if(input[0] == '-'){
+                input.unshift('0');
+            }
+            input = calsi.functions.bracket(input);
+            let string = calsi.functions.stackGeneration(input);
+            let numbers = string.numbers;
+            let symbols = string.symbols;
+            let ans = numbers[0];
+            let num = [];
+            let sym = [];
+            let len = symbols.length;
+        
+            while(symbols.length > 0){
+                
+                let symbol = symbols.pop();
+                let num1, num2;
+                switch(symbol){
+                    case '*':
+                        num1 = parseFloat(numbers.pop());
+                        num2 = parseFloat(numbers.pop());
+                        ans = num1 * num2;
+                        numbers.push(ans);
+                        break;
+                    case '/':
+                        num1 = parseFloat(numbers.pop());
+                        num2 = parseFloat(numbers.pop());
+                        ans = num1 / num2;
+                        numbers.push(ans);
+                        break;
+                    default:
+                        num.push(numbers.pop());
+                        sym.push(symbol);
+                }
+              
+                
+            }
+            num.push(numbers.pop());
+            string = calsi.functions.reset(num, sym);
+            numbers = string.numbers;
+            symbols = string.symbols;
+            len = symbols.length;
+            for(let i = 0;i < len;i++){
+                
+                var symbol = symbols.pop();
+                switch(symbol){
+                    case '+':
+                        num1 = parseFloat(numbers.pop());
+                        num2 = parseFloat(numbers.pop());
+                        ans = num1 + num2;
+                        break;
+                    case '-':
+                        num1 = parseFloat(numbers.pop());
+                        num2 = parseFloat(numbers.pop());
+                        ans = num1 - num2;
+                        break;
+                }
+                numbers.push(ans);
+            }
+            
+            return ans;
+        }
+        
+
+        return{
+            calculator: calculator,
+            calculate: calculate
+        }
+    }
+)();
+
+
 buttons.functions = (
     function(){
         function append(value){
             var input = document.getElementById("input");
             input.value += value;
         }
+
+
         function clear(){
             var input = document.getElementById("input");
             input.value = "";
             var display = document.getElementById("display");
             display.innerHTML = 0;
         }
+
+
         function backSpace(){
             var input = document.getElementById("input");
             input.value = input.value.slice(0, -1);
             
-            (input.value) ? calsi.functions.calculator(): clear();
+            (input.value) ? calsi.main.calculator(): clear();
         }
+
+
         function input(){
             var input = document.getElementById("input").value;
             return input;
         }
+
+
         return{
             append: append, clear: clear, 
             backSpace: backSpace, input: input
@@ -33,18 +145,27 @@ buttons.functions = (
 
 function append(value){
     buttons.functions.append(value);
+    if(!isNaN(Number(value))){
+        calsi.main.calculator();
+    }
+
 }
 
 
 calsi.functions = (
+    
     function(){  
+        
         function stackGeneration(input){
+            var float = /\d+(\.\d+)?/g;
+            var operator = /[\+\-\*\/]/g;
+
             let numbers = [];
             let symbols = [];
             input.forEach(e => {
-                if(e.match(/\d+/)){
+                if(e.match(float)){
                     numbers.push(e);
-                }else if(e.match(/[\+\-\*\/]/)){
+                }else if(e.match(operator)){
                     symbols.push(e);
                 }
             });
@@ -85,7 +206,7 @@ calsi.functions = (
                     string = [];
                     for(j = i + 1;j < len;j++){
                         if(input[j] == ')'){ 
-                            ans = calculate(string);
+                            ans = calsi.main.calculate(string);
                             found = true;
                             break;
                         }
@@ -104,6 +225,8 @@ calsi.functions = (
     
             return input;            
         }
+
+       
         function order(input){
             let i = 0;
             while(input[i]){
@@ -121,97 +244,12 @@ calsi.functions = (
             return input;
         }
 
-        function formulate(input){
-            let ans;
-            let string;
-            let i = 0;
-            input = order(input);
-            input = input.match(/[\d]+|[\+\-\*\/\(\)]/g);
-            while(input[i]){
-                if(input[i] == '('){
-                    input = bracket(input);
-                }
-                i++;
-            }
-            ans = calculate(input);
 
-            return ans;
+        return {
+            order: order, bracket: bracket,
+            reset: reset, stackGeneration: stackGeneration
         }
 
-
-        function calculate(input){
-            if(input[0] == '-'){
-                input.unshift('0');
-            }
-            input = bracket(input);
-            let string = stackGeneration(input);
-            let numbers = string.numbers;
-            let symbols = string.symbols;
-            let ans = numbers[0];
-            let num = [];
-            let sym = [];
-            let len = symbols.length;
-        
-            while(symbols.length > 0){
-                
-                let symbol = symbols.pop();
-                let num1, num2;
-                switch(symbol){
-                    case '*':
-                        num1 = parseFloat(numbers.pop());
-                        num2 = parseFloat(numbers.pop());
-                        ans = num1 * num2;
-                        numbers.push(ans);
-                        break;
-                    case '/':
-                        num1 = parseFloat(numbers.pop());
-                        num2 = parseFloat(numbers.pop());
-                        ans = num1 / num2;
-                        numbers.push(ans);
-                        break;
-                    default:
-                        num.push(numbers.pop());
-                        sym.push(symbol);
-                }
-              
-                
-            }
-            num.push(numbers.pop());
-            string = reset(num, sym);
-            numbers = string.numbers;
-            symbols = string.symbols;
-            len = symbols.length;
-            for(let i = 0;i < len;i++){
-                
-                var symbol = symbols.pop();
-                switch(symbol){
-                    case '+':
-                        num1 = parseFloat(numbers.pop());
-                        num2 = parseFloat(numbers.pop());
-                        ans = num1 + num2;
-                        break;
-                    case '-':
-                        num1 = parseFloat(numbers.pop());
-                        num2 = parseFloat(numbers.pop());
-                        ans = num1 - num2;
-                        break;
-                }
-                numbers.push(ans);
-            }
-            
-            return ans;
-        }
-        function calculator(){
-            var display = document.getElementById("display");
-            var input = document.getElementById("input").value;
-            
-            var ans = formulate(input);
-
-            display.innerHTML = ans;
-        }
-        return{
-            calculator: calculator
-        }
     }
 )();
 
