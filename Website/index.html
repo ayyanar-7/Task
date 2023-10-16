@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- Document Type Declaration -->
+<html>
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
+    <title>Your Page Title</title> <!-- Title displayed in the browser tab -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to an external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <section class="section-bg" id="Home">
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                        <nav>
+                            <ul class="nav p-1" style="--bs-nav-link-color: var(--bs-white); --bs-nav-pills-link-active-color: var(--bs-blue); --bs-nav-pills-link-active-bg: var(--bs-white);">
+                                <li class="nav-item" role="presentation"><a class="nav-link" href="#home">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#About-me">About me</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#Projects">Achievements</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#Contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="name" class="jumbotron">
+                <h2>Hi I'm <span>Ayyanar</span></h2>
+                <h3>Junior associate Fullstack Developer</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/Son_roi_rahman_"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/_r.14_01_?utm_source=qr&amp;igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/rahman2211/"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                </div>    
+            </div> 
+        </section>
+    </main>
+    <div class="container-fluid block">
+        <div class="row about">
+            <div class="col-4">
+                <img src="">
+            </div>
+            <div class="col-8" id="About-me">
+                <h1 class="heading sub-title">About me</h1>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                    <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                    <p class="tab-links" onclick="openTab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming lang </span><br>HTML5, CSS3, JavaScript, TypeScript<br>bootstrap,<br>Angular,<br>C, C++,<br>Python,<br>My SQL<br></li>
+                        <!-- <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Software Development</span><br>Building Application</li> -->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - current </span><br>Junior Associate Fullstack Developer <br>    
+                        </li>
+                        <!-- <li><span>2019-2021</span><br>Web app Development</li> -->
+                        <!-- <li><span>2017-2019</span><br>UI/UX Design Executive at Coin Digital Ltd.</li> -->
+                        <!-- <li><span>2017-2019</span><br>Internship at eKart ecommerce.</li> -->
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>B.E(Computer Science and Engineering), UCEV - Villupuram</li>
+                        <li><span>2022</span><br>HSC, GovHSS, Alambadi</li>
+                        <li><span>2020</span><br>SSLC, GovHSS, Alambadi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container" id="Projects">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-brands fa-android"></i>
+                    <h2>Web Site Development</h2>
+                    <p>build using  in this Website HTML,CSS,JavaScript .</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Web development refers to the creating, building, and maintaining of websites. It includes aspects such as 
+                            web design,web publishing, web programming,
+                            and database management. It is the creation of an application that works over the internet i.e. websites.</p>
+                    <a href="#">Learn more</a>
+
+                </div>
+                <div>
+
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>Software Development</h2>
+                    <p>Software development is the process programmers use to build computer programs. 
+                        The process, also known as the Software Development Life Cycle (SDLC), 
+                        includes several phases that provide a method for building products that meet technical specifications and user requirements.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <h1 class="sub-title">Achievements</h1>
+            <div class="fireworks-container1 dvprize">
+            <canvas width="300" height="330"></canvas></div>
+        </div>
+        <hr>
+        <div id="contact">
+            <div class="container" id="contact">
+                <div class="row">
+                    <div class="contact-left col">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane" aria-hidden="true"></i> 7ayyanar49@gmail.com</p>
+                        <p><i class="fas fa-phone-square-alt" aria-hidden="true"></i> 6379303054</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                            <a href="https://twitter.com"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+                            <a href="https://instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right col">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required="">
+                            <input type="email" name="Email" placeholder="Your Email" required="">
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn3">submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <div class="copyright">
+            <p>copyright @ Made with <i class="fas fa-heart" aria-hidden="true"></i> Ayyanar 2023 </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body> 
+</html>
