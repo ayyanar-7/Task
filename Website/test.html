@@ -1,15 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .contact-right form {
+    width: 100%;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        border: 0;
+        outline: none;
+        background: #262626;
+        padding: 15px;
+        margin: 15px 0;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+
+  </style>
+</head>
 <body>
-
-<h1>Show a Date Control</h1>
-
-<form>
-  <label for="birthday">Birthday:</label>
-  <input type="date">
-  <input type="submit">
-</form>
-
-
+  <div id="contact">
+    <div class="container" id="contact">
+        <div class="row">
+            <div class="contact-left col">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane" aria-hidden="true"></i> 7ayyanar49@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt" aria-hidden="true"></i> 6379303054</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="contact-right col">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required="">
+                    <input type="email" name="Email" placeholder="Your Email" required="">
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn3">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

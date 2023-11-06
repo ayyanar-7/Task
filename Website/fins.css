@@ -1,0 +1,114 @@
+body{
+    background-color:white;
+}
+.nav{
+    color : white;
+    height : 50px;
+    margin : 10px;
+    font-family:'Open Sans','Helvetica Neue', sans-serif;
+    padding: 10px;
+}
+.opt1{
+    color : white;
+    font-family:'Open Sans','Helvetica Neue', sans-serif;
+    height:200px;
+    margin:10px;
+    
+}
+.opt2 img{
+    width : 200px;
+    height : 200px;
+    text-align: center;
+}
+.opt1 p{
+    font-family: 'Open Sans','Helvetica Neue', sans-serif;
+    margin:10px;
+    width:30%;
+}
+.opt2{
+    height:200px;
+    margin:10px;
+}
+.bar1{
+    background-color: coral;
+    height:50px;
+    margin : 10px;
+}
+.bar2{
+    background-color: rgb(13, 116, 252);
+    height:50px;
+    margin : 10px;
+}
+.join1{
+    background-color:rgb(223, 254, 67);
+}
+.join2{
+    background-color: blueviolet;
+}
+.close{
+    background-color: rgb(14, 21, 118);
+    height : 500px;
+}
+.close1{
+    background-color: red;
+    height: 150px;
+}
+.close2{
+    background-color: rgb(0, 30, 255);
+    height: 150px;
+}
+.close3{
+    background-color: rgb(94, 255, 0);
+    height: 150px;
+}
+.gap1{
+    background-color: yellow;
+    height: 70px;
+    margin-left: 100px;
+    margin:10px;
+}
+.gap2{
+    background-color: cyan;
+    height : 70px;
+    margin:10px;
+}
+.min1{
+    background-color:rgb(247, 228, 11);
+    height : 30px;
+    margin : 10px;
+    margin-left: 100px;
+}
+.min2{
+    background-color: darkgreen;
+    height:30px;
+    margin:10px;
+}
+.min3{
+    background-color: rgb(36, 190, 233);
+    height:30px;
+    margin:10px;
+}
+.menu{
+    background-color: rgb(9, 9, 114);
+}
+.gray{
+    background-color: lightgray;
+    height : 300px;
+    padding: 2% 10%;
+}
+.gray row{
+    margin :100px;
+}
+.move{
+    background-color: gray;
+}
+.move div{
+    background-color: rgb(254, 250, 250);
+    height : 100px;
+    margin : 10px;
+}
+.block{
+    background-color: rgb(255, 253, 253);
+    height : 300px;
+    padding : 2% 10%;
+}

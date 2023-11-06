@@ -284,10 +284,7 @@ form textarea {
 .copyright {
     width: 100%;
     text-align: center;
-    padding: 25px 0;
-    background: #262626;
     font-weight: 300;
-    margin-top: 20px;
 }
 
 .copyright i {
@@ -337,15 +334,121 @@ form textarea {
     font-size: 18px;
     border-radius: 6px;
 }
-.dvprize {
-    position: absolute;
-    top: 5rem;
-}
-audio, canvas, progress, video {
-    display: inline-block;
-    vertical-align: baseline;
-}
 
+.s-container h1{
+    color: White;
+    text-align: center;
+    position: relative;
+    top: 5px;
+}
+.s-container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+.services{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.services .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+}
+.services .box:hover{
+    transform: translateY(-20px);
+}
+.services .box::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+.services .box::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(30px);
+}
+.services .box:nth-child(2)::before,
+.services .box:nth-child(2)::after{
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+.services .box:nth-child(3)::before,
+.services .box:nth-child(3)::after{
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+.services .box span{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+.services .box span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+.services .box .content{
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+.services .box .content h2{
+    font-size: 2 em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.sevices .box .content p{
+    font-size: 1.1 em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.services .box .content p{
+    font-size: 1.1 em;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+.services .box .content a{
+    display: inline-block;
+    font-size: 1.1 em;
+    color: #111;
+    background: #fff;
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.services .box .content i{
+    font-size: 40px;
+}
 
 
 
